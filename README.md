@@ -17,21 +17,24 @@ These instruction are to make the new poky build with tsocks that will enable to
    "cd tsocks"
    add the tsocks.bb file to this directory
 
+4. Please source the env file "source poky/oe-init-build-env <your build dir. >"
 
-4. goto yocto build directory
-   "bitbkae -c clean uclibc"
-   "bitbkae -c clean tsock"
-   "bitbkae -c cleanall image-full"
+
+5. goto yocto build or <your build dir.> directory
+   "bitbake -c clean uclibc"
+   "bitbake -c clean tsock"
+   "bitbake -c cleanall image-full"
    "bitbake image-full"
 
 
 once build is ready download the image to clanton 
 
-5. Login into clandon
+6. Login into clandon
    "cd /etc"
    "copy tsocks.conf into /etc"
+   please edit the tsocks.conf file to add your proxy server setting in it.
    "LD_PRELOAD=/usr/lib/libtsocks.so"
 
-6. Now we are ready to bypass the firewall
+7. Now we are ready to bypass the firewall
 
 
